@@ -9,28 +9,20 @@
 
     </style>
 
-    <style name="EverydayItem">
+    <style name="trackerRow">
         <item name="android:textColor">#d9e6f2</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:weightSum">4</item>
         <item name="android:background">#005580</item>
     </style>
 
-    <style name="EverydayText">
+    <style name="trackerLabel">
         <item name="android:layout_weight">2</item>
     </style>
 
-    <style name="InputInt">
+    <style name="trackerInput">
         <item name="android:background">#e6e6e6</item>
         <item name="android:layout_marginLeft">20dp</item>
-        <item name="android:layout_width">40dp</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="InputText">
-        <item name="android:background">#e6e6e6</item>
-        <item name="android:layout_marginLeft">20dp</item>
-        <!--<item name="android:layout_width">fill_parent</item>-->
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">2</item>
     </style>
