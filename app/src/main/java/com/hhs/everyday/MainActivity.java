@@ -3,11 +3,11 @@ package com.hhs.everyday;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
+import com.wefika.horizontalpicker.HorizontalPicker;
+import org.kidinov.snp_lib.SimpleNumberPicker;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Tells the ListView what data to use
         theListView.setAdapter(theAdapter);
+
+
     }
 
     private  List<TrackerItem> getTrackers()

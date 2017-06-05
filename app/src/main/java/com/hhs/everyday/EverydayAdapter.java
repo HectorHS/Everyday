@@ -2,7 +2,6 @@ package com.hhs.everyday;
 
 import android.content.Context;
 import android.text.InputType;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,25 +31,22 @@ public class EverydayAdapter extends ArrayAdapter<TrackerItem>
     {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.tracker_row_layout, parent, false);
-        TextView textView = (TextView) rowView.findViewById(R.id.label);
 
-
-        EditText editText = (EditText) rowView.findViewById(R.id.input);
         if(values.get(position).getType() == TrackerTypes.text)
         {
-            editText.setInputType(InputType.TYPE_CLASS_TEXT);
-            editText.setWidth(80);
+            View rowView = inflater.inflate(R.layout.tracker_row_layout_text, parent, false);
+            TextView textView = (TextView) rowView.findViewById(R.id.label);
+            textView.setText(values.get(position).getName());
+            return rowView;
         }
         else
         {
-            editText.setInputType(InputType.TYPE_CLASS_NUMBER);
-            editText.setWidth(40);
-            editText.setText("0");
+            View rowView = inflater.inflate(R.layout.row_number, parent, false);
+            TextView textView = (TextView) rowView.findViewById(R.id.label_number);
+            textView.setText(values.get(position).getName());
+            return rowView;
         }
-        textView.setText(values.get(position).getName());
 
 
-        return rowView;
     }
 }

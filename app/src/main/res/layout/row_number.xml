@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:theme="@style/trackerRow"
+              android:weightSum="4">
+
+    <TextView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/label_number"
+            style="@style/trackerLabel"
+            android:layout_weight="2"
+            android:gravity="center"
+            xmlns:android="http://schemas.android.com/apk/res/android"/>
+
+    <!--https://github.com/ShawnLin013/NumberPicker-->
+    <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/number_picker"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:layout_gravity="right"
+            app:np_dividerColor="#f2f2f2"
+            app:np_orientation="horizontal"
+            app:np_max="5"
+            app:np_min="0"
+            app:np_selectedTextColor="#f2f2f2"
+            app:np_textColor="#f2f2f2"
+            app:np_wrapSelectorWheel="false"
+            app:np_value="3"
+    android:layout_weight="2"/>
+
+</LinearLayout>

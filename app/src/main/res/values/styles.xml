@@ -17,13 +17,12 @@
     </style>
 
     <style name="trackerLabel">
-        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">25sp</item>
     </style>
 
     <style name="trackerInput">
         <item name="android:background">#e6e6e6</item>
         <item name="android:layout_marginLeft">20dp</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">2</item>
     </style>
 
