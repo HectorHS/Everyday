@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trackers>
+<tracker>
+    <label>Happy</label>
+    <type>spectrum</type>
+</tracker>
+<tracker>
+<label>Rested</label>
+<type>spectrum</type>
+</tracker>
+<tracker>
+<label>Clarity</label>
+<type>spectrum</type>
+</tracker>
+<tracker>
+<label>Food</label>
+<type>text</type>
+</tracker>
+<tracker>
+<label>Water</label>
+<type>spectrum</type>
+</tracker>
+</trackers>

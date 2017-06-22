@@ -5,9 +5,9 @@ package com.hhs.everyday;
  */
 public class TrackerItem {
     private String name;
-    private TrackerTypes type;
+    private TrackerType type;
 
-    public TrackerItem (String name, TrackerTypes type)
+    public TrackerItem (String name, TrackerType type)
     {
         this.name = name;
         this.type = type;
@@ -20,8 +20,5 @@ public class TrackerItem {
         return this.name;
     }
 
-    public TrackerTypes getType()
-    {
-        return this.type;
-    }
+    public TrackerType getType() { return this.type; }
 }

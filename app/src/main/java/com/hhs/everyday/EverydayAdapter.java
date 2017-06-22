@@ -1,12 +1,10 @@
 package com.hhs.everyday;
 
 import android.content.Context;
-import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.List;
@@ -32,7 +30,7 @@ public class EverydayAdapter extends ArrayAdapter<TrackerItem>
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if(values.get(position).getType() == TrackerTypes.text)
+        if(values.get(position).getType() == TrackerType.text)
         {
             View rowView = inflater.inflate(R.layout.tracker_row_layout_text, parent, false);
             TextView textView = (TextView) rowView.findViewById(R.id.label);
