@@ -57,10 +57,7 @@ public class MainActivity extends AppCompatActivity {
         List<TrackerItem> trackersList = new ArrayList<TrackerItem>();
         try
         {
-            InputStream inputStream = getAssets().open("today.xml");
-            InputSource inputSource = new InputSource(inputStream);
-            XMLParser xml = new XMLParser(inputSource);
-            trackersList = xml.readXml();
+            trackersList = new TrackerManager().getTrackersFromXML(getAssets().open("today.xml"));
         }
         // TODO Handle exceptions properly
          catch (IOException e) {

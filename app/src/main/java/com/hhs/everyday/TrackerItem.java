@@ -13,8 +13,6 @@ public class TrackerItem {
         this.type = type;
     }
 
-
-
     public String getName()
     {
         return this.name;
