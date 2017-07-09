@@ -8,5 +8,16 @@ public enum TrackerType {
     number,
     counter,
     spectrum,
-    checkbox
+    checkbox;
+
+    public static String[] getStringValues() {
+        String[] types = new String[TrackerType.values().length];
+        int i =0;
+
+        for  (TrackerType t: TrackerType.values()) {
+            types[i++] = t.toString();
+        }
+
+        return types;
+    }
 }

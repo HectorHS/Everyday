@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.*;
-import org.xml.sax.InputSource;
+
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +17,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListAdapter theAdapter = new EverydayAdapter(this, getTrackers());
+        List<TrackerItem> trackers = getTrackers();
+
+        // Save list into shared preferences
+        new SharedPreferencesManager(getSharedPreferences("trackersConfig", MODE_PRIVATE)).UpdateTrackers(trackers);
+
+        // Get list from shared preferences
+        List<TrackerItem> sharedTrackers = new SharedPreferencesManager(getSharedPreferences("trackersConfig", MODE_PRIVATE)).GetTrackers();
+
+        ListAdapter theAdapter = new EverydayAdapter(this, sharedTrackers);
 
         // ListViews display data in a scrollable list
         ListView theListView = (ListView) findViewById(R.id.theListView);
@@ -41,16 +48,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
 
-            // We check what menu item was clicked and show a Toast
-            if (id == R.id.action_settings) {
+            // We check what menu item was clicked
+            if (id == R.id.action_configuration) {
 
-                Intent i=new Intent(MainActivity.this, SettingsActivity.class);
+                Intent i=new Intent(MainActivity.this, ConfigurationActivity.class);
                 startActivity(i);
 
         	    return true;
-            } else {
-        	            return false;
-        	        }
+            } else { return false; }
             }
 
     private List<TrackerItem> getTrackers() {

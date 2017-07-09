@@ -12,11 +12,11 @@ import java.util.List;
 /**
  * Created by Hecto on 27/05/2017.
  */
-public class SettingsAdapter extends ArrayAdapter<TrackerItem> {
+public class ConfigurationAdapter extends ArrayAdapter<TrackerItem> {
     private final Context context;
     private final List<TrackerItem> values;
 
-    public SettingsAdapter(Context context, List<TrackerItem> values) {
+    public ConfigurationAdapter(Context context, List<TrackerItem> values) {
         super(context, -1, values);
         this.context = context;
         this.values = values;
@@ -27,7 +27,7 @@ public class SettingsAdapter extends ArrayAdapter<TrackerItem> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View rowView = inflater.inflate(R.layout.setting_row_layout, parent, false);
+        View rowView = inflater.inflate(R.layout.configuration_row_layout, parent, false);
         TextView labelTextView = (TextView) rowView.findViewById(R.id.label);
         labelTextView.setText(values.get(position).getName());
         TextView typeTextView = (TextView) rowView.findViewById(R.id.type);

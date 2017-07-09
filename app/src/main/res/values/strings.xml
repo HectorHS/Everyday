@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Everyday</string>
-    <string name="firstRowText">Happy</string>
-    <string name="secondRowText">Rested</string>
-    <string name="thirdRowText">Food</string>
-    <string name="fourthRowText">Clarity</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
 </resources>
